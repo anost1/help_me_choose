@@ -50,3 +50,9 @@ input{
 .gobutton{
   margin-top: 70px;
 }
+
+
+.imgrow {
+  display: flex;
+  margin-top: 20px;
+}
