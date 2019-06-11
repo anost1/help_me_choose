@@ -1,0 +1,52 @@
+button {
+  background-color: orange;
+  color: white;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: 20px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+}
+
+h1{
+  font-weight: lighter;
+  font-size: 70px;
+  color: green;
+  letter-spacing: 5px;
+  margin-bottom: 5px;
+}
+
+.inputsection{
+  margin: 80px 10px 80px 10px;
+  width: 800px;
+  height: 70px;
+}
+
+.inputs{
+  height: inherit;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+input{
+  margin-top: 10px;
+  font-size: 35px;
+  padding-left: 8px;
+}
+
+.addbutton {
+  margin-top: 10px;
+}
+
+.gobutton{
+  margin-top: 70px;
+}
