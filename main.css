@@ -55,7 +55,7 @@ input{
 }
 
 
-.gobutton{
+.submit{
   margin-top: 70px;
 }
 
@@ -63,4 +63,15 @@ input{
 .imgrow {
   display: flex;
   margin-top: 20px;
+}
+
+.resultsection {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  font-weight: bolder;
+  color: green;
+  letter-spacing: 5px;
 }

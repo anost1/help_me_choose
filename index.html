@@ -17,7 +17,7 @@
       <button class="addoption">Add</button>
     </div>
     <div class="resultsection"></div>
-    <button class="gobutton">Go!!</button>
+    <button class="submit">Go!!</button>
     <div class="imgrow">
   <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
   <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
@@ -38,8 +38,20 @@
       var add_option = function() {
         $('.inputs').append('<input></input>')
       }
+  $('.addoption').click(add_option)
 
-      $('.addoption').click(add_option)
+      var options = []
+      var submit = function() {
+        $('.inputsection').hide()
+        $('.resultsection').css('display','flex')
+        $('input').each(function() {
+            options.push($(this).val())
+        })
+        var winner = options[Math.floor(Math.random() * options.length)]
+        console.log(winner)
+        $('.resultsection').text(winner)
+      }
+      $('.submit').click(submit)
     })
   </script>
 
