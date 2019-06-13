@@ -1,11 +1,18 @@
 button {
-  background-color: orange;
-  color: white;
-  padding-left: 80px;
-  padding-right: 80px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  background-color: white;
+  border: 4px solid orange;
+  border-radius: 12px;
+  color: orange;
+  padding: 3px 30px;
   font-size: 20px;
+}
+
+button:hover {
+  background-color: orange;
+  border-radius: 12px;
+  color: white;
+  padding: 3px 30px;
+  font-size: 30px;
 }
 
 body {
@@ -27,7 +34,7 @@ h1{
 .inputsection{
   margin: 80px 10px 80px 10px;
   width: 800px;
-  height: 70px;
+
 }
 
 .inputs{
@@ -43,9 +50,10 @@ input{
   padding-left: 8px;
 }
 
-.addbutton {
-  margin-top: 10px;
+.addoption{
+  margin-top: 5px;
 }
+
 
 .gobutton{
   margin-top: 70px;

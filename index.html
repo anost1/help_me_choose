@@ -14,8 +14,9 @@
       <div class="inputs">
         <input placeholder="Something"></input>
       </div>
-      <button class="addbutton">Add</button>
+      <button class="addoption">Add</button>
     </div>
+    <div class="resultsection"></div>
     <button class="gobutton">Go!!</button>
     <div class="imgrow">
   <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
@@ -28,6 +29,19 @@
   <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
   <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
   <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
-  
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+    $(function() {
+      $('.resultsection').hide()
+
+      var add_option = function() {
+        $('.inputs').append('<input></input>')
+      }
+
+      $('.addoption').click(add_option)
+    })
+  </script>
+
   </body>
 </html>
