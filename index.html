@@ -36,7 +36,8 @@
       $('.resultsection').hide()
 
       var add_option = function() {
-        $('.inputs').append('<input></input>')
+        $('.inputs').append('<input class="addedoption"></input>')
+        $('.addedoption').focus()
       }
   $('.addoption').click(add_option)
 
@@ -52,6 +53,8 @@
         $('.resultsection').text(winner)
       }
       $('.submit').click(submit)
+
+
     })
   </script>
 
