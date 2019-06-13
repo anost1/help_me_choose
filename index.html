@@ -7,8 +7,8 @@
   </head>
   <body>
 
-    <h1>Help me choose between..</h1>
-    <img style="-webkit-user-select: none;cursor:zoom-in;"src="http://www.allisoncarmichael.com/food-illustration/kitchen.jpg" width"525" height="341.6">
+    <h1 id="headline">Help me choose between..</h1>
+    <img id="headimg" style="-webkit-user-select: none;cursor:zoom-in;"src="https://graphiccave.com/wp-content/uploads/2015/06/Vegetables-Vector-Illustrations-Free-PNG-Graphic-Cave.png" width"800" height="408">
   </img>
     <div class="inputsection">
       <div class="inputs">
@@ -19,17 +19,17 @@
     <div class="resultsection"></div>
     <button class="submit">Go!!</button>
     <div class="imgrow">
-  <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
-  <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
-  <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
-  <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
-  <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
-  <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
-  <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
-  <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
-  <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
-  <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
-
+      <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
+      <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
+      <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
+      <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
+      <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
+      <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
+      <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
+      <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
+      <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
+      <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
+    </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script>
     $(function() {
@@ -39,7 +39,8 @@
         $('.inputs').append('<input class="addedoption"></input>')
         $('.addedoption').focus()
       }
-  $('.addoption').click(add_option)
+
+      $('.addoption').click(add_option)
 
       var options = []
       var submit = function() {
@@ -51,8 +52,21 @@
         var winner = options[Math.floor(Math.random() * options.length)]
         console.log(winner)
         $('.resultsection').text(winner)
+        $('#headline').text('The winner is..')
+        $('#headimg').remove()
       }
+
       $('.submit').click(submit)
+
+
+      var switcharoo = function() {
+        $('body').toggleClass('clickback')
+      }
+
+      $("#headline").click(switcharoo)
+
+
+
 
 
     })

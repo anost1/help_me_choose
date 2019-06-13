@@ -32,7 +32,7 @@ h1{
 }
 
 .inputsection{
-  margin: 80px 10px 80px 10px;
+  margin: 30px 10px;
   width: 800px;
 
 }
@@ -56,13 +56,13 @@ input{
 
 
 .submit{
-  margin-top: 70px;
+  margin-top: 35px;
 }
 
 
 .imgrow {
   display: flex;
-  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
 .resultsection {
@@ -74,4 +74,9 @@ input{
   font-weight: bolder;
   color: green;
   letter-spacing: 5px;
+}
+
+.clickback {
+  background-color: #fff2ad;
+  opacity: 0.4;
 }
