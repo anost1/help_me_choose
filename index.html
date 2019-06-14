@@ -10,14 +10,14 @@
     <h1 id="headline">Vad blir det för mat?</h1>
     <img id="headimg" style="-webkit-user-select: none;cursor:zoom-in;"src="https://graphiccave.com/wp-content/uploads/2015/06/Vegetables-Vector-Illustrations-Free-PNG-Graphic-Cave.png" width"800" height="408">
   </img>
-  <img id="headimg2" src="https://png.pngtree.com/element_origin_min_pic/16/07/28/21579a0a99133c6.jpg"></img>
+  <img id="headimg2" style="display: none" src="https://png.pngtree.com/element_origin_min_pic/16/07/28/21579a0a99133c6.jpg"></img>
     <div class="inputsection">
       <div class="inputs">
         <input placeholder="Ge ett förslag!"></input>
       </div>
       <button class="addoption">Add</button>
     </div>
-    <div class="resultsection"></div>
+    <div class="resultsection" style="display: none"></div>
     <button class="submit">Go!!</button>
     <div class="imgrow">
       <img style="-webkit-user-select: none;cursor:zoom-in;"src="https://cdn.pixabay.com/photo/2018/02/01/20/40/citrus-3124073_960_720.png" width="96" height="48">
@@ -34,8 +34,6 @@
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script>
     $(function() {
-      $('.resultsection').hide()
-      $('#headimg2').hide()
 
       var add_option = function() {
         $('.inputs').append('<input class="addedoption"></input>')
