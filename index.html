@@ -2,17 +2,18 @@
 <html lang=en>
   <head>
     <meta charset=utf-8>
-    <title>Help me choose</title>
+    <title>Vad blir det för mat?</title>
     <link href="./main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
 
-    <h1 id="headline">Help me choose between..</h1>
+    <h1 id="headline">Vad blir det för mat?</h1>
     <img id="headimg" style="-webkit-user-select: none;cursor:zoom-in;"src="https://graphiccave.com/wp-content/uploads/2015/06/Vegetables-Vector-Illustrations-Free-PNG-Graphic-Cave.png" width"800" height="408">
   </img>
+  <img id="headimg2" src="https://png.pngtree.com/element_origin_min_pic/16/07/28/21579a0a99133c6.jpg"></img>
     <div class="inputsection">
       <div class="inputs">
-        <input placeholder="Something"></input>
+        <input placeholder="Ge ett förslag!"></input>
       </div>
       <button class="addoption">Add</button>
     </div>
@@ -34,6 +35,7 @@
   <script>
     $(function() {
       $('.resultsection').hide()
+      $('#headimg2').hide()
 
       var add_option = function() {
         $('.inputs').append('<input class="addedoption"></input>')
@@ -45,15 +47,16 @@
       var options = []
       var submit = function() {
         $('.inputsection').hide()
+        $('.submit').hide()
         $('.resultsection').css('display','flex')
         $('input').each(function() {
             options.push($(this).val())
         })
         var winner = options[Math.floor(Math.random() * options.length)]
-        console.log(winner)
-        $('.resultsection').text(winner)
-        $('#headline').text('The winner is..')
+        $('.resultsection').text(winner+"!!!")
+        $('#headline').text('Det blir ..')
         $('#headimg').remove()
+        $('#headimg2').show()
       }
 
       $('.submit').click(submit)
